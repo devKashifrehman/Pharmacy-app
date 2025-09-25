@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Pharmacy-app/static/css/main.de8f1d81.css",
+    "main.js": "/Pharmacy-app/static/js/main.d7884510.js",
+    "static/js/453.267c0e7c.chunk.js": "/Pharmacy-app/static/js/453.267c0e7c.chunk.js",
+    "static/media/2.jpg": "/Pharmacy-app/static/media/2.16bf4114be49b8471941.jpg",
+    "static/media/1.jpg": "/Pharmacy-app/static/media/1.f10d43603140494d75ac.jpg",
+    "static/media/1.3d.jpg": "/Pharmacy-app/static/media/1.3d.04315f9591fed5b9da95.jpg",
+    "static/media/1.png": "/Pharmacy-app/static/media/1.5b7f05629179b7378c3d.png",
+    "static/media/2.webp": "/Pharmacy-app/static/media/2.a369486e88154d323f97.webp",
+    "static/media/1.webp": "/Pharmacy-app/static/media/1.f9106341c8bfed7bf30e.webp",
+    "static/media/8.jpg": "/Pharmacy-app/static/media/8.c7736b7a1698da092d02.jpg",
+    "static/media/vitaminC.jpeg": "/Pharmacy-app/static/media/vitaminC.1a6b86af8ec19eb64ddb.jpeg",
+    "static/media/supplements.jpeg": "/Pharmacy-app/static/media/supplements.0ffd3843e3952e4746f2.jpeg",
+    "index.html": "/Pharmacy-app/index.html",
+    "main.de8f1d81.css.map": "/Pharmacy-app/static/css/main.de8f1d81.css.map",
+    "main.d7884510.js.map": "/Pharmacy-app/static/js/main.d7884510.js.map",
+    "453.267c0e7c.chunk.js.map": "/Pharmacy-app/static/js/453.267c0e7c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de8f1d81.css",
+    "static/js/main.d7884510.js"
+  ]
+}
