@@ -6,13 +6,12 @@ import HeroSection from "./Components/Home/HEro/Hero";
 import Footer from "./Components/Footer/Footer";
 import Aboutus from "./Components/About/Aboutus";
 import Shop from "./Components/Shop/Pharma";
-import  ContactForm from "./Components/Contact/Contactus";
- 
-// Dummy pages (replace with your own components later)
+import ContactForm from "./Components/Contact/Contactus";
 
 function App() {
   return (
-    <Router>
+    // basename zaroori hai GitHub Pages ke liye
+    <Router basename="/Pharmacy-app">
       <Header />
       <Routes>
         <Route path="/" element={<HeroSection />} />
@@ -23,6 +22,6 @@ function App() {
       <Footer />
     </Router>
   );
-} 
+}
 
 export default App;

@@ -7,8 +7,8 @@ It provides users with essential pages like **Home, About Us, Shop, and Contact 
 ---
 
 ## 🚀 Live Preview  
-🔗 [View Live Demo](https://your-live-preview-link.com)  
-*(replace with your deployed link e.g. Vercel, Netlify, or GitHub Pages)*
+🔗 [View Live Demo](https://devKashifrehman.github.io/Pharmacy-app/)  
+
 
 ---
 
@@ -34,35 +34,31 @@ It provides users with essential pages like **Home, About Us, Shop, and Contact 
 ## 🛠️ Tech Stack  
 - **Frontend:** React, TypeScript, CSS  
 - **Chatbot:** Custom-built Virtual Assistant  
-- **Deployment:** *(Vercel / Netlify / GitHub Pages – update as per your deployment)*
+- **Deployment:** *(Github)*
 
 ---
 
 ## 📦 Installation  
 
 1. Clone the repository  
-   ```bash
+   ```
    git clone https://github.com/devKashifRehman/pharmacy-app.git
    cd pharmacy-app
 ````
 
 2. Install dependencies
 
-   ```bash
    npm install
-   ```
+   
 
 3. Start development server
 
-   ```bash
    npm start
-   ```
+   
 
 4. Build for production
 
-   ```bash
    npm run build
-   ```
 
 ---
 
