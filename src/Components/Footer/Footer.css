@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.footer {
+  position: relative; /* needed for pseudo-element */
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeUp 1s ease-out;
+  transition: background-color 0.5s, color 0.5s;
+
+  background: white; /* footer background */
+  color: black;
+
+  /* Gradient border */
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(to right, #00BFFF, #32CD32);
+  border-image-slice: 1;
+
+  /* Remove invalid property */
+  /* border-shadow: 0 2px 8px rgba(0, 191, 255, 0.5); */
+}
+
+/* Top gradient shadow glow */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -8px; /* slightly above the footer */
+  left: 0;
+  width: 100%;
+  height: 12px; /* thickness of shadow */
+  background: linear-gradient(to bottom, rgba(0, 191, 255, 0.5), transparent);
+  pointer-events: none; /* make sure it doesn't block clicks */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00BFFF;
+}
+
+.contact-info h3,
+.social-links h3 {
+  margin-bottom: 10px;
+  color: #32CD32;
+}
+
+.contact-info p {
+  margin: 4px 0;
+}
+
+.icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icons a {
+  font-size: 1.4rem;
+  padding: 8px;
+  border-radius: 20%;
+  background: #00BFFF;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.icons a:hover {
+  background: #32CD32;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 191, 255, 0.5);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#Copy {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+.dev-name {
+  font-weight: bold;
+  color: #007bff; /* optional styling */
+}

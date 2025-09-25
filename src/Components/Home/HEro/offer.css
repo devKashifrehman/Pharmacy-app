@@ -1,0 +1,87 @@
+.offer-banner {
+  background: #fff7e6;
+  border: 2px solid #f0e6d6;
+  border-radius: 12px;
+  padding: 35px 20px;   /* height increase ki padding se */
+  margin: 25px auto;    /* center align */
+  max-width: 1300px;     /* width limit ki */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.shop-link {
+  text-decoration: none;   /* underline hat gayi */
+  color: inherit;          /* button ke andar ka color le lega */
+  display: inline-block;   /* proper spacing ke liye */
+}
+
+.offer-banner:hover {
+  border-color: #4CAF50;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+
+}
+
+.offer-text h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.offer-text p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.offer-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.offer-btn:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+.offer-image img {
+  width: 120px;   /* thoda bara image */
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .offer-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 15px;  /* mobile pe padding kam */
+  }
+  
+  .offer-image img {
+    width: 100px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .offer-text h3 {
+    font-size: 18px;
+  }
+
+  .offer-text p {
+    font-size: 14px;
+  }
+
+  .offer-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,50 @@
+.mission {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.mission h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.mission-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 300px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.mission-card {
+  border-top: 4px solid #00bfff;
+}
+
+.vision-card {
+  border-top: 4px solid #32cd32;
+}
+@media (max-width: 768px) {
+  .mission-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

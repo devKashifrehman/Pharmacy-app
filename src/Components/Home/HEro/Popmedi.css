@@ -1,0 +1,69 @@
+.popmedi-section {
+  padding: 20px;
+}
+
+.popmedi-section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif; /* modern clean font */
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.popmedi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+}
+
+.popmedi-card {
+  background: #fff;
+  border: 2px solid #f0f0f0;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.popmedi-card img {
+  width: 380px;         /* bigger image */
+  height: 300px;        /* fill more space */
+  object-fit: contain;  /* image distort na ho */
+  margin-bottom: 12px;
+}
+
+.popmedi-card h3 {
+  font-family: 'Poppins', sans-serif; /* modern bold italic look */
+  font-weight: 600;
+  font-style: italic;
+  font-size: 16px;
+  margin: 8px 0 5px 0;
+  color: #222;
+}
+
+.popmedi-card .price {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;     /* bold */
+  font-size: 15px;
+  color: #4CAF50;
+  margin-top: 5px;
+}
+
+.popmedi-card:hover {
+  border-color: #4CAF50;
+  transform: translateY(-6px) scale(1.07);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+@media (max-width: 600px) {
+  .popmedi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+  }
+
+  .popmedi-card img {
+    width: 80px;
+    height: 80px;
+  }
+}

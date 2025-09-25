@@ -1,0 +1,115 @@
+.category-section {
+  padding: 20px;
+}
+
+
+.category-section h2 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-style: italic;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background: #fff;
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-card img {
+  width: 100%;
+  height: 190px;          /* thoda aur bada */
+  object-fit: contain;    /* size maintain karega, stretch nahi hoga */
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.category-card p {
+  font-size: 15px;
+  font-weight: bold;      /* bold text */
+  font-style: italic;     /* italic touch */
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Hover effects */
+.category-card:hover {
+  border-color: #4CAF50;
+  transform: scale(1.07);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+.category-card:hover p {
+  color: #4CAF50;
+}
+.category-card:hover img {
+  transform: scale(1.1);   /* thoda zoom effect on hover */
+  filter: brightness(1.15);
+}
+
+/* Active (click) effects */
+.category-card:active {
+  transform: scale(0.95);
+}
+.category-card:active p {
+  color: #388E3C;
+}
+.category-card:active img {
+  filter: brightness(0.85);
+}
+
+/* Focus (keyboard navigation) */
+.category-card:focus {
+  outline: none;
+  border-color: #388E3C;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+  .category-card img {
+    height: 100px; /* mobile me thoda chhota */
+  }
+}
+@media (max-width: 400px) {
+  .category-grid {
+    grid-template-columns: 1fr; /* single column on very small screens */
+  }
+  .category-card img {
+    height: 80px; /* aur chhota */
+  }
+}
+@media (min-width: 1200px) {
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* larger screens ke liye */
+  }
+  .category-card img {
+    height: 150px; /* thoda aur bada */
+  }
+}
+@media (min-width: 1600px) {
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* extra large screens ke liye */
+  }
+  .category-card img {
+    height: 170px; /* aur bada */
+  }
+}
