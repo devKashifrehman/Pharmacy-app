@@ -48,7 +48,7 @@ export default function ChatAgent() {
       if (lower.includes("cough")) {
         return "For cough, syrup like Dextromethorphan can help.";
       }
-      if (lower.includes("bye,thanks")) {
+      if (lower.includes("bye")|| lower.includes("thanks")) {
         return "Thank you! Stay healthy.";
       }
       return "Sorry, I can only answer basic pharmacy queries in English.";
