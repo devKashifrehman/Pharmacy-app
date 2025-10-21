@@ -33,16 +33,22 @@ export default function ChatAgent() {
       if (lower.includes("hi") || lower.includes("hello")) {
         return "Hello! 👋 Do you need any medicine or consultation?";
       }
+      if(lower.includes("yep")|| lower.includes("yes") || lower.includes("sure")){
+        return "Great! How can I assist you further?";
+      }
       if (lower.includes("pain")) {
         return "For pain relief we usually suggest Paracetamol (500mg).";
       }
       if (lower.includes("fever")) {
         return "For fever, you can take Paracetamol and keep yourself hydrated.";
       }
+       if (lower.includes("fever") && lower.includes("cough")) {
+    return "Since you have both fever and cough, you can take Paracetamol (500mg) for fever and a cough syrup containing Dextromethorphan. Stay hydrated and rest well.";
+  }
       if (lower.includes("cough")) {
         return "For cough, syrup like Dextromethorphan can help.";
       }
-      if (lower.includes("bye")) {
+      if (lower.includes("bye,thanks")) {
         return "Thank you! Stay healthy.";
       }
       return "Sorry, I can only answer basic pharmacy queries in English.";
@@ -53,6 +59,9 @@ export default function ChatAgent() {
       if (lower.includes("hi") || lower.includes("salam") || lower.includes("hello")) {
         return "Hello! 👋 Kya aap ko dawa ya mashwara chahiye?";
       }
+      if(lower.includes("haan")|| lower.includes("ji") || lower.includes("gi")){
+        return "Acha! Main aap ki kis tarah madad kar sakta hoon?"; 
+      }
       if (lower.includes("dard")) {
         return "Dard ke liye aam tor par Paracetamol (500mg) use hoti hai.";
       }
@@ -62,6 +71,10 @@ export default function ChatAgent() {
       if (lower.includes("khansi")) {
         return "Khansi ke liye syrup jaise Dextromethorphan use hota hai.";
       }
+      if (lower.includes("bukhar") && lower.includes("khansi")) {
+  return "Mujhe afsos hai ke aap theek mehsoos nahi kar rahe 😷. Agar aapko bukhar aur khansi dono hain to aap Paracetamol (500mg) le sakte hain bukhar ke liye, aur khansi ke liye koi Dextromethorphan wala syrup lein. Pani zyada piyein aur achi tarhan aaram karein.";
+}
+
       if (lower.includes("shukriya") || lower.includes("bye")) {
         return "Shukriya! Sehatmand rahiye.";
       }
