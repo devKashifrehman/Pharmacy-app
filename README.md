@@ -70,3 +70,13 @@ Developed by **Kashif Rehman**
 🔗 [LinkedIn](https://www.linkedin.com/in/kashif-rehman-04620a26b/)
 
 ---
+
+## © Copyright & Usage
+
+© 2026 Kashif Rehman. All Rights Reserved.
+
+This project, including its design, structure, and source code, is the intellectual property of **Kashif Rehman**.
+
+Permission is hereby granted to view, fork, and use this project **for personal, educational, and portfolio purposes only**, provided that proper credit is given to the author.
+
+❌ Commercial use, redistribution, resale, or claiming this project as your own work is strictly prohibited without prior written permission from the author.
