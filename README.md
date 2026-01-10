@@ -71,6 +71,8 @@ Developed by **Kashif Rehman**
 
 ---
 
+------
+
 ## © Copyright & Usage
 
 © 2026 Kashif Rehman. All Rights Reserved.
