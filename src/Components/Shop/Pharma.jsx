@@ -21,6 +21,12 @@ const SAMPLE_MEDICINES = [
     illness: "Fever",
     price: 120,
     img: img1,
+    details: {
+      dosage: "1 tablet after meal, up to 3 times daily",
+      uses: "Reduces fever and mild pain",
+      sideEffects: "Nausea, mild stomach upset (rare)",
+      warning: "Do not exceed recommended dose",
+    },
   },
   {
     id: 2,
@@ -30,6 +36,12 @@ const SAMPLE_MEDICINES = [
     illness: "Allergy",
     price: 90,
     img: img2,
+    details: {
+      dosage: "1 tablet once daily (preferably at night)",
+      uses: "Relief from allergy symptoms and sneezing",
+      sideEffects: "Drowsiness, dry mouth",
+      warning: "Avoid driving if you feel sleepy",
+    },
   },
   {
     id: 3,
@@ -39,6 +51,12 @@ const SAMPLE_MEDICINES = [
     illness: "Infection",
     price: 350,
     img: img5,
+    details: {
+      dosage: "As prescribed by doctor, usually every 8 hours",
+      uses: "Treats bacterial infections",
+      sideEffects: "Loose motions, rash, nausea",
+      warning: "Complete full course, do not skip doses",
+    },
   },
   {
     id: 4,
@@ -48,6 +66,12 @@ const SAMPLE_MEDICINES = [
     illness: "Supplement",
     price: 500,
     img: img3,
+    details: {
+      dosage: "1 softgel daily after food",
+      uses: "Supports bone health and immunity",
+      sideEffects: "Usually well tolerated",
+      warning: "Use carefully in high calcium conditions",
+    },
   },
   {
     id: 5,
@@ -57,6 +81,12 @@ const SAMPLE_MEDICINES = [
     illness: "Cough",
     price: 220,
     img: img4,
+    details: {
+      dosage: "10 ml, 2-3 times daily",
+      uses: "Relieves dry and wet cough",
+      sideEffects: "Sleepiness, mild nausea",
+      warning: "Use measuring cup for exact dose",
+    },
   },
   {
     id: 6,
@@ -66,6 +96,12 @@ const SAMPLE_MEDICINES = [
     illness: "Pain",
     price: 140,
     img: img6,
+    details: {
+      dosage: "1 tablet every 6-8 hours after food",
+      uses: "Relieves pain, inflammation, and fever",
+      sideEffects: "Acidity, stomach irritation",
+      warning: "Avoid on empty stomach",
+    },
   },
 ];
 
@@ -92,6 +128,7 @@ export default function Pharma() {
   const [cart, setCart] = useState([]); // items: { ...product, qty }
   const [cartOpen, setCartOpen] = useState(false);
   const [checkoutOpen, setCheckoutOpen] = useState(false);
+  const [selectedMedicine, setSelectedMedicine] = useState(null);
 
   const types = ["All", ...unique(SAMPLE_MEDICINES, "type")];
   const illnesses = ["All", ...unique(SAMPLE_MEDICINES, "illness")];
@@ -274,7 +311,7 @@ export default function Pharma() {
                     <div className="card-actions">
                       <button
                         className="custom-btn"
-                        onClick={() => alert("Details placeholder")}
+                        onClick={() => setSelectedMedicine(p)}
                       >
                         Details
                       </button>
@@ -454,6 +491,52 @@ export default function Pharma() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* Medicine Details Modal */}
+      {selectedMedicine && (
+        <div className="modal-backdrop" role="dialog" aria-modal="true">
+          <div className="modal-card">
+            <h3>{selectedMedicine.name}</h3>
+            <div className="muted" style={{ marginBottom: 12 }}>
+              {selectedMedicine.brand} • {selectedMedicine.type} • Use: {selectedMedicine.illness}
+            </div>
+            <div className="order-summary">
+              <div>
+                <strong>Use:</strong> {selectedMedicine.details.uses}
+              </div>
+              <div>
+                <strong>Dosage:</strong> {selectedMedicine.details.dosage}
+              </div>
+              <div>
+                <strong>Side Effects:</strong> {selectedMedicine.details.sideEffects}
+              </div>
+              <div>
+                <strong>Warning:</strong> {selectedMedicine.details.warning}
+              </div>
+            </div>
+
+            <div className="modal-actions">
+              <button
+                type="button"
+                className="custom-btn"
+                onClick={() => setSelectedMedicine(null)}
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                className="btn primary"
+                onClick={() => {
+                  addToCart(selectedMedicine);
+                  setSelectedMedicine(null);
+                }}
+              >
+                Add to Cart
+              </button>
+            </div>
           </div>
         </div>
       )}
